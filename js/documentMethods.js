@@ -11,7 +11,7 @@ console.log(children);
 let navBar = children[0];
 console.log(navBar);
 
-
+ 
 
 /*
     Popular Methods with the Document Object
