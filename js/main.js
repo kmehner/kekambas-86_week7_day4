@@ -37,7 +37,7 @@
 {
     // Get the header
     let myHeader = document.getElementById('myHeader');
-    console.log(myHeader);
+    // console.log(myHeader);
 
     // Create a function to execute when the event is triggered
     function handleHeaderEvent(e){
@@ -52,4 +52,19 @@
     // Add event listener
     myHeader.addEventListener('click', handleHeaderEvent);
 
+}
+
+// Add event listeners for our buttons
+{
+    let myButtonColors = ['primary', 'secondary', 'success', 'warning', 'danger', 'info']
+
+    let myButtons = document.querySelectorAll('.col-2 > button')
+
+    for (let i=0; i< myButtons.length; i++){
+        let button = myButtons[i]
+        button.addEventListener('click', () => {
+            let body = document.body;
+            body.className = `bg-${myButtonColors[i]}`;
+        })
+    }
 }
